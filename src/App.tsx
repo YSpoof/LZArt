@@ -36,9 +36,8 @@ export default function App() {
   return (
     <div
       id="newBody"
-      class={`bg-right-bottom bg-repeat flex flex-col justify-between transition-all ease-out duration-500`}
-    >
-      <main class="container text-center min-w-full h-screen">
+      class={`bg-right-bottom bg-repeat flex flex-col justify-between transition-all ease-out duration-500`}>
+      <main class="container text-center min-w-full h-full">
         <div class="logo max-w-64 mx-auto">
           <img
             src={siteData.siteLogo}
@@ -54,20 +53,18 @@ export default function App() {
                 class="transition-all text-center text-stone-300 bg-stone-900/60 px-4 py-2 rounded-lg hover:scale-105 hover:text-stone-100 active:scale-95"
                 href={project().url}
                 target="_blank"
-                title={`Built on ${project().technology}`}
-              >
+                title={`Built on ${project().technology}`}>
                 {project().title}
               </a>
             )}
           </Index>
         </div>
       </main>
-      <footer class="mt-4 text-center bg-stone-900/30 p-1">
+      <footer class="mt-8 text-center bg-stone-900/30 p-1">
         <p class="text-stone-300">
           <a
             class="transition-all hover:text-stone-100 hover:underline"
-            href={`mailto:${siteData.contatEmail}`}
-          >
+            href={`mailto:${siteData.contatEmail}`}>
             contato@lzart.com.br
           </a>{" "}
           - {year}

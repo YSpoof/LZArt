@@ -18,7 +18,7 @@ export default {
     {
       title: "Banger",
       url: "https://banger.lzart.com.br",
-      technology: "SolidJS",
+      technology: "Vanilla TS",
     },
     {
       title: "Dashy",

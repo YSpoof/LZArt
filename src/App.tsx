@@ -36,8 +36,8 @@ export default function App() {
   return (
     <div
       id="newBody"
-      class={`bg-right-bottom bg-repeat flex flex-col justify-between transition-all ease-out duration-500`}>
-      <main class="container text-center min-w-full h-full">
+      class="bg-right-bottom bg-repeat flex flex-col justify-between transition-all ease-out duration-500">
+      <main class="container text-center min-w-full min-h-screen h-full">
         <div class="logo max-w-64 mx-auto">
           <img
             src={siteData.siteLogo}

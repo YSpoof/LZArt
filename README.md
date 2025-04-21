@@ -1,5 +1,5 @@
 # LZArt
 
-This project is build with SolidJS yay
+This project is built with VueJS yay
 
 <https://lzart.com.br>

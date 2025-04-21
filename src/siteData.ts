@@ -34,7 +34,7 @@ export default {
     {
       title: "My Resume",
       url: "https://luis.lzart.com.br/",
-      technology: "SolidJS",
+      technology: "Solid JS",
     },
   ],
 };

@@ -1,14 +1,21 @@
-import tailwindcss from "@tailwindcss/vite";
-import { defineConfig } from "vite";
-import solidPlugin from "vite-plugin-solid";
+import { fileURLToPath, URL } from "node:url";
 
+import { defineConfig } from "vite";
+import vue from "@vitejs/plugin-vue";
+import vueDevTools from "vite-plugin-vue-devtools";
+import tailwindcss from "@tailwindcss/vite";
+
+// https://vite.dev/config/
 export default defineConfig({
-  plugins: [solidPlugin(), tailwindcss()],
-  server: {
-    port: 3000,
+  plugins: [vue(), vueDevTools(), tailwindcss()],
+  resolve: {
+    alias: {
+      "@": fileURLToPath(new URL("./src", import.meta.url)),
+    },
   },
   build: {
     target: "esnext",
     outDir: "docs",
   },
+  server: { port: 3000 },
 });

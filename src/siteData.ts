@@ -25,6 +25,11 @@ export default {
       url: "https://dashy.lzart.com.br",
       technology: "Angular",
     },
+    {
+      title: "QREncode",
+      url: "https://qrcode.lzart.com.br",
+      technology: "Vue",
+    },
     { title: "NGMaker", url: "https://ngmaker.com.br", technology: "Angular" },
     {
       title: "My Test Place",
@@ -34,7 +39,7 @@ export default {
     {
       title: "My Resume",
       url: "https://luis.lzart.com.br/",
-      technology: "Solid JS",
+      technology: "Solid Start",
     },
   ],
 };

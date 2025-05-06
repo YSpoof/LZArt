@@ -28,7 +28,7 @@ export default {
     {
       title: "QREncode",
       url: "https://qrcode.lzart.com.br",
-      technology: "SolidJS",
+      technology: "Vue",
     },
     { title: "NGMaker", url: "https://ngmaker.com.br", technology: "Angular" },
     {

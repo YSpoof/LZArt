@@ -11,11 +11,6 @@ export default {
       technology: "Vanilla JS",
     },
     {
-      title: "Oficina RogerNight",
-      url: "https://ofrgnight.github.io",
-      technology: "Nuxt",
-    },
-    {
       title: "Banger",
       url: "https://banger.lzart.com.br",
       technology: "Vanilla TS",
@@ -29,6 +24,16 @@ export default {
       title: "QREncode",
       url: "https://qrcode.lzart.com.br",
       technology: "Vue",
+    },
+    {
+      title: "BPM Calculator",
+      url: "https://bpm.lzart.com.br",
+      technology: "Vue",
+    },
+    {
+      title: "Oficina RogerNight",
+      url: "https://ofrgnight.github.io",
+      technology: "Nuxt",
     },
     { title: "NGMaker", url: "https://ngmaker.com.br", technology: "Angular" },
     {

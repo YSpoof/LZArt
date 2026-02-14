@@ -36,6 +36,11 @@ export default {
       technology: "Nuxt/Static",
     },
     {
+      title: "WALink Generator",
+      url: "https://walink.lzart.com.br",
+      technology: "Svelte",
+    },
+    {
       title: "BPM Calculator",
       url: "https://bpm.lzart.com.br",
       technology: "Vue",
@@ -50,12 +55,7 @@ export default {
       url: "https://ofrgnight.github.io",
       technology: "Nuxt",
     },
-    { title: "NGMaker", url: "https://ngmaker.com.br", technology: "Angular" },
-    {
-      title: "My Test Place",
-      url: "https://yspoof.github.io",
-      technology: "Vanilla JS",
-    },
+    { title: "NGMaker", url: "https://ngmaker.com.br", technology: "Nuxt" },
     {
       title: "My Resume",
       url: "https://luis.lzart.com.br/",

@@ -11,6 +11,11 @@ export default {
       technology: "Nuxt",
     },
     {
+      title: "Drop (Beta)",
+      url: "https://drop.lzart.com.br",
+      technology: "SvelteKit",
+    },
+    {
       title: "Banger",
       url: "https://banger.lzart.com.br",
       technology: "Vanilla TS",

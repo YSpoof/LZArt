@@ -15,6 +15,7 @@ export default defineConfig({
   },
   build: {
     target: "esnext",
+    reportCompressedSize: false,
   },
   server: { port: 3000 },
 });

@@ -8,7 +8,7 @@ export default {
     {
       title: "Tarefa Educação",
       url: "https://tarefaedu.lzart.com.br",
-      technology: "Nuxt",
+      technology: "SvelteKit",
     },
     {
       title: "Drop (Beta)",
@@ -28,17 +28,17 @@ export default {
     {
       title: "Shortener",
       url: "https://s.lzart.com.br",
-      technology: "Nuxt",
+      technology: "SvelteKit",
     },
     {
       title: "QREncode",
       url: "https://qrcode.lzart.com.br",
-      technology: "Vue",
+      technology: "SvelteKit",
     },
     {
       title: "BGRemover",
       url: "https://bgremover.lzart.com.br",
-      technology: "Nuxt/Static",
+      technology: "SvelteKit/Static",
     },
     {
       title: "WALink Generator",
@@ -58,13 +58,13 @@ export default {
     {
       title: "Oficina RogerNight",
       url: "https://ofrgnight.github.io",
-      technology: "Nuxt",
+      technology: "Nuxt/Static",
     },
-    { title: "NGMaker", url: "https://ngmaker.com.br", technology: "Nuxt" },
+    { title: "NGMaker", url: "https://ngmaker.com.br", technology: "SvelteKit" },
     {
       title: "My Resume",
       url: "https://luis.lzart.com.br/",
-      technology: "Nuxt",
+      technology: "Nuxt/Static",
     },
   ],
 };

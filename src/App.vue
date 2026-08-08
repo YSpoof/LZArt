@@ -1,83 +1,83 @@
 <script setup lang="ts" vapor>
-  import { onMounted, onBeforeUnmount, useTemplateRef } from "vue";
+  import { onMounted } from "vue";
   import siteData from "@/siteData";
-
-  const year = new Date().getFullYear();
-  const newBodyRef = useTemplateRef("newBody");
-
-  const randomizeBgPosition = () => {
-    const newBgPosition = `${Math.floor(Math.random() * 100)}% ${Math.floor(
-      Math.random() * 100
-    )}%`;
-    if (newBodyRef.value)
-      newBodyRef.value.style.backgroundPosition = newBgPosition;
-  };
+  import ProjectCard from "@/components/ProjectCard.vue";
+  import Footer from "@/components/layout/Footer.vue";
 
   onMounted(() => {
-    if (newBodyRef.value)
-      newBodyRef.value.style.backgroundImage = `url(${siteData.bgImage})`;
-
-    window.addEventListener("blur", randomizeBgPosition);
-    window.addEventListener("focus", randomizeBgPosition);
-
     siteData.projects.forEach((project) => {
-      let link = document.createElement("link");
-      link.rel = "prefetch";
+      const link = document.createElement("link");
+      link.rel = "preconnect";
       link.href = project.url;
-      link.as = "document";
       link.crossOrigin = "anonymous";
       document.head.appendChild(link);
-      link.rel = "preconnect";
-      document.head.appendChild(link);
     });
-  });
-
-  onBeforeUnmount(() => {
-    // Clean up event listeners
-    window.removeEventListener("blur", randomizeBgPosition);
-    window.removeEventListener("focus", randomizeBgPosition);
   });
 </script>
 
 <template>
-  <div
-    ref="newBody"
-    class="bg-right-bottom bg-repeat flex flex-col justify-between transition-all ease-out duration-500">
-    <main class="container text-center min-w-full min-h-screen h-full">
-      <div class="logo max-w-64 mx-auto mt-8">
-        <img
-          :src="siteData.siteLogo"
-          alt="Logo LZArt"
-          height="256"
-          width="256"
-          title="Built on Vue"
-          @mouseover="randomizeBgPosition" />
+  <div class="min-h-screen flex flex-col bg-base-300 relative overflow-hidden">
+    <div class="gradient-bg"></div>
+
+    <section class="hero min-h-[60vh] relative z-10">
+      <div class="hero-content text-center flex-col">
+        <div class="logo-glow mb-6">
+          <img
+            :src="siteData.siteLogo"
+            :alt="`Logo ${siteData.siteName}`"
+            width="120"
+            height="120"
+            class="w-24 h-24 md:w-32 md:h-32 drop-shadow-2xl hover:scale-120 active:scale-95 transition-transform duration-300" />
+        </div>
+        <h1 class="text-5xl md:text-7xl font-black tracking-tight">
+          <span>
+            {{ siteData.siteName }}
+          </span>
+        </h1>
+        <p
+          class="text-xl md:text-2xl text-base-content/70 font-light tracking-widest uppercase mt-4">
+          {{ siteData.siteDescription }}
+        </p>
+        <a
+          href="#projects"
+          class="btn btn-primary btn-lg mt-8 gap-2 group shadow-lg shadow-primary/25 hover:shadow-primary/40 transition-all">
+          Ver Projetos
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5 transition-transform group-hover:translate-y-1"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+          </svg>
+        </a>
       </div>
-      <h1 class="text-xl m-4 font-bold">Projetos</h1>
-      <div class="flex flex-col gap-4 max-w-fit mx-auto">
-        <template v-if="siteData.projects.length">
-          <a
-            v-for="project in siteData.projects"
-            :key="project.title"
-            class="transition-all text-center text-stone-300 bg-stone-900/60 px-4 py-2 rounded-lg hover:scale-105 hover:text-stone-100 active:scale-95"
-            :href="project.url"
-            target="_blank"
-            :title="`Built on ${project.technology}`">
-            {{ project.title }}
-          </a>
-        </template>
-        <div v-else>Loading...</div>
+    </section>
+
+    <main
+      id="projects"
+      class="container mx-auto flex-1 px-4 py-16 relative z-10">
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
+        <span class="text-base-content">Nossos </span>
+        <span class="text-primary">Projetos</span>
+      </h2>
+
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+        <ProjectCard
+          v-for="project in siteData.projects"
+          :key="project.title"
+          v-bind="project" />
       </div>
     </main>
-    <footer class="mt-8 text-center bg-stone-900/30 p-1">
-      <p class="text-stone-300">
-        <a
-          class="transition-all hover:text-stone-100 hover:underline"
-          :href="`mailto:${siteData.contatEmail}`">
-          {{ siteData.contatEmail }}
-        </a>
-        - {{ year }}
-      </p>
-    </footer>
+
+    <Footer
+      :site-name="siteData.siteName"
+      :site-logo="siteData.siteLogo"
+      :contact-email="siteData.contatEmail" />
   </div>
 </template>

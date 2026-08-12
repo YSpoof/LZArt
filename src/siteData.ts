@@ -27,6 +27,13 @@ export default {
       preview: "/previews/syncview.webp",
     },
     {
+      title: "SoundSync",
+      url: "https://soundsync.lzart.com.br",
+      technology: "SvelteKit",
+      tooltip: "Sincronize músicas com amigos!",
+      preview: "/previews/soundsync.webp",
+    },
+    {
       title: "Banger",
       url: "https://banger.lzart.com.br",
       technology: "Vanilla TS",

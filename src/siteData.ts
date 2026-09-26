@@ -97,7 +97,7 @@ export default {
       url: "https://luis.lzart.com.br/",
       technology: "Nuxt/Static",
       tooltip: "Meu currículo interativo!",
-      preview: "/previews/my-resume.webp",
+      preview: "/previews/whoami.webp",
     },
   ],
 };

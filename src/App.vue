@@ -5,10 +5,10 @@
   import Footer from "@/components/layout/Footer.vue";
 
   onMounted(() => {
-    siteData.projects.forEach((project) => {
+    [...siteData.projects, ...siteData.packages].forEach((item) => {
       const link = document.createElement("link");
       link.rel = "preconnect";
-      link.href = project.url;
+      link.href = item.url;
       link.crossOrigin = "anonymous";
       document.head.appendChild(link);
     });
@@ -72,6 +72,19 @@
           v-for="project in siteData.projects"
           :key="project.title"
           v-bind="project" />
+      </div>
+
+      <h2 id="packages" class="text-3xl md:text-4xl font-bold text-center mb-12 mt-20">
+        <span class="text-base-content">Bibliotecas </span>
+        <span class="text-primary">npm</span>
+      </h2>
+
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <ProjectCard
+          v-for="pkg in siteData.packages"
+          :key="pkg.title"
+          v-bind="pkg" />
       </div>
     </main>
 

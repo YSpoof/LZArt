@@ -96,8 +96,64 @@ export default {
       title: "Whoami",
       url: "https://luis.lzart.com.br/",
       technology: "Nuxt/Static",
-      tooltip: "Meu currículo interativo!",
+      tooltip: "Meu currículo digital!",
       preview: "/previews/whoami.webp",
+    },
+  ],
+  packages: [
+    {
+      title: "Desfetch",
+      url: "https://npmx.dev/package/desfetch",
+      technology: "TypeScript",
+      tooltip:
+        "Wrapper type-safe do fetch com { data, error } e JSON automático.",
+      preview: "/previews/npm.webp",
+    },
+    {
+      title: "FastRTC",
+      url: "https://npmx.dev/package/fastrtc",
+      technology: "TypeScript",
+      tooltip: "Helper de mesh para conectar peers e abrir data channels.",
+      preview: "/previews/npm.webp",
+    },
+    {
+      title: "Quick DI",
+      url: "https://npmx.dev/package/quick-di",
+      technology: "TypeScript",
+      tooltip:
+        "Injeção de dependência mínima e rápida. inject(), sem decorators.",
+      preview: "/previews/npm.webp",
+    },
+    {
+      title: "Svelte Lazyloader",
+      url: "https://npmx.dev/package/svelte-comp-lazyloader",
+      technology: "TypeScript",
+      tooltip:
+        "Lazy-load de componentes Svelte 5 com props tipadas, preload e SSR.",
+      preview: "/previews/npm.webp",
+    },
+    {
+      title: "SvelteKit Node Worker",
+      url: "https://npmx.dev/package/vite-plugin-sveltekit-node-worker",
+      technology: "TypeScript",
+      tooltip:
+        "Plugin Vite para worker_threads do Node.js no SvelteKit 3.",
+      preview: "/previews/npm.webp",
+    },
+    {
+      title: "SvelteKit WS",
+      url: "https://npmx.dev/package/vite-plugin-sveltekit-ws",
+      technology: "TypeScript",
+      tooltip:
+        "Plugin Vite que adiciona suporte a WebSocket no SvelteKit com adapter-node.",
+      preview: "/previews/npm.webp",
+    },
+    {
+      title: "Typed SW",
+      url: "https://npmx.dev/package/vite-plugin-typed-sw",
+      technology: "TypeScript",
+      tooltip: "Plugin Vite para Service Workers ESM type-safe com HMR.",
+      preview: "/previews/npm.webp",
     },
   ],
 };
